@@ -1,10 +1,14 @@
 import React from "react";
 import { Search, ShoppingCart, User } from "lucide-react";
-
+import { motion } from "motion/react";
 const FloatingNavbar = () => {
   return (
-    <div className="sticky top-6 z-[50] flex justify-center">
-      <nav className="flex items-center gap-6 px-6 py-3 rounded-full 
+    <motion.div 
+             initial={{  opacity: 0, scale: 0.8 }}
+          animate={{  opacity: 1, scale: 1 }}
+          transition={{ duration: 1.1, ease: "easeinout" }}
+    className="sticky top-6 z-[50] flex justify-center">
+      <nav className="flex items-center gap-6 px-6 py-2 rounded-full 
         bg-white/80 backdrop-blur-md 
         shadow-lg border border-white/30">
 
@@ -29,7 +33,7 @@ const FloatingNavbar = () => {
         </div>
 
       </nav>
-    </div>
+    </motion.div>
   );
 };
 
