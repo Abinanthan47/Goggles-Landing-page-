@@ -1,0 +1,35 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+@import "tailwindcss";
+
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  @keyframes marquee {
+from {
+transform: translateX(0);
+}
+to {
+transform: translateX(-50%);
+}
+}
+
+
+.animate-marquee {
+animation: marquee 30s linear infinite;
+}
+
+
+}
+
+body {
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400; 
+}
