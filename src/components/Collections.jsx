@@ -7,7 +7,6 @@ const NewArravials = () => {
       id: 1,
       title: "PRO AM 172'S",
       price: "£149.99",
-      // Using a placeholder that matches the orange color
       image: "/blue_goggle.png",
       badge: "NEW",
     },
@@ -15,7 +14,6 @@ const NewArravials = () => {
       id: 2,
       title: "PRO AM 172'S",
       price: "£149.99",
-      // Using a placeholder that matches the green color
       image: "/yellow_goggle.png",
       badge: "NEW",
     },
@@ -23,14 +21,13 @@ const NewArravials = () => {
       id: 3,
       title: "PRO AM 172'S",
       price: "£149.99",
-      // Using a placeholder that matches the white/grey color
       image: "/purple_goggle.png",
       badge: "NEW",
     },
   ];
 
   return (
-    <section className="h-screen w-full bg-white max-w-7xl mx-auto  pt-10 ">
+    <section className="min-h-screen w-full bg-white max-w-7xl mx-auto  pt-10 ">
       <div className="flex items-end justify-between mb-4">
         <div className="">
           <h1 className="text-6xl tracking-tight text-black">New Arrivals</h1>
@@ -51,11 +48,11 @@ const NewArravials = () => {
 
       {/* products card */}
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-8 ">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-8 mb-12 ">
         {products.map((product) => (
           <div
             key={product.id}
-            className="bg-gray-200 min-h-100 relative flex  justify-between flex-col p-8 group"
+            className="bg-gray-100 min-h-100 relative flex  justify-between flex-col p-8 group"
           >
             <div className="flex flex-col w-full items-center ">
               {product.badge && (
@@ -69,7 +66,7 @@ const NewArravials = () => {
             {/* image section */}
 
             <div className="w-full flex justify-center py-6">
-              <img src={product.image} alt={product.title} className="w-full max-h-96 hover:scale-110 "/>
+              <img src={product.image} alt={product.title} className="w-full h-80 hover:scale-110 "/>
             </div>
 
             <div className="flex justify-center text-xl">
