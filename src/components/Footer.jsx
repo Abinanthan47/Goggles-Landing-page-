@@ -4,10 +4,10 @@ import { Facebook, Youtube, Instagram, ArrowRight, Twitter } from 'lucide-react'
 const Footer = () => {
   return (
     <footer className="w-full font-sans">
-      
+
       {/* --- TOP SECTION: SOCIALS & NEWSLETTER --- */}
       <div className="bg-white py-10 px-6 md:px-12 lg:px-20 flex flex-col md:flex-row justify-between items-center gap-8">
-        
+
         {/* Left: Follow Us */}
         <div className="flex items-center gap-6">
           <h3 className="text-2xl font-bold uppercase tracking-wide  text-black">
@@ -26,9 +26,9 @@ const Footer = () => {
             Join Our Newsletter for Discounts and News!
           </label>
           <div className="flex h-12 w-full md:w-[400px]">
-            <input 
-              type="email" 
-              placeholder="Your Email Address" 
+            <input
+              type="email"
+              placeholder="Your Email Address"
               className="flex-1 bg-gray-100 px-4 text-black placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-black/20"
             />
             <button className="bg-black text-white w-14 flex items-center justify-center hover:bg-gray-800 transition-colors">
@@ -41,31 +41,31 @@ const Footer = () => {
       {/* --- DECORATIVE "TORN EDGE" SEPARATOR --- */}
       {/* This SVG creates the rough black paint look dripping onto the white */}
       <div className="w-full leading-0 rotate-180 bg-white">
-        <svg 
-            viewBox="0 0 1200 120" 
-            preserveAspectRatio="none" 
-            className="relative block w-full h-10  fill-black"
+        <svg
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="relative block w-full h-10  fill-black"
         >
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
         </svg>
       </div>
 
       {/* --- MAIN BLACK FOOTER --- */}
       <div className="bg-black text-white pt-10 pb-6 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
-          
+
           {/* LOGO COLUMN (Left Side) */}
           <div className="col-span-1 md:col-span-4 flex justify-center md:justify-start items-start pt-4">
-             {/* Custom Red 'X' / Star Shape Logo */}
-             <div className="flex items-center gap-2">
-             <img src="/logo.png" alt="Shred Logo" className="w-26 h-26 object-contain" />
-             <span className="text-2xl font-bold uppercase tracking-wide  text-white">Shred</span>
-             </div>
+            {/* Custom Red 'X' / Star Shape Logo */}
+            <div className="flex items-center gap-2">
+              <img src="/logo.png" alt="Shred Logo" className="w-26 h-26 object-contain" />
+              <span className="text-2xl font-bold uppercase tracking-wide  text-white">Shred</span>
+            </div>
           </div>
 
           {/* LINKS GRID (Right Side) */}
           <div className="col-span-1 md:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
-            
+
             {/* Column 1: SHOP */}
             <div className="flex flex-col gap-4">
               <h4 className="text-xl font-bold uppercase  tracking-wider">Shop</h4>
@@ -95,8 +95,8 @@ const Footer = () => {
               </ul>
             </div>
 
-             {/* Column 4: SUPPORT */}
-             <div className="flex flex-col gap-4">
+            {/* Column 4: SUPPORT */}
+            <div className="flex flex-col gap-4">
               <h4 className="text-xl font-bold uppercase  tracking-wider">Support</h4>
               <ul className="flex flex-col gap-2 text-gray-400 text-sm font-medium">
                 {['Customer Care', 'FAQ', 'Shipping', 'Distributors', 'Technical Documents', 'Newsletter'].map((item) => (
