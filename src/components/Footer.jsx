@@ -10,7 +10,7 @@ const Footer = () => {
         
         {/* Left: Follow Us */}
         <div className="flex items-center gap-6">
-          <h3 className="text-2xl font-bold uppercase tracking-wide font-[Oswald] text-black">
+          <h3 className="text-2xl font-bold uppercase tracking-wide  text-black">
             Follow Us:
           </h3>
           <div className="flex gap-4">
@@ -40,11 +40,11 @@ const Footer = () => {
 
       {/* --- DECORATIVE "TORN EDGE" SEPARATOR --- */}
       {/* This SVG creates the rough black paint look dripping onto the white */}
-      <div className="w-full leading-[0] rotate-180 bg-white">
+      <div className="w-full leading-0 rotate-180 bg-white">
         <svg 
             viewBox="0 0 1200 120" 
             preserveAspectRatio="none" 
-            className="relative block w-full h-[40px] fill-black"
+            className="relative block w-full h-10  fill-black"
         >
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
         </svg>
@@ -57,7 +57,10 @@ const Footer = () => {
           {/* LOGO COLUMN (Left Side) */}
           <div className="col-span-1 md:col-span-4 flex justify-center md:justify-start items-start pt-4">
              {/* Custom Red 'X' / Star Shape Logo */}
+             <div className="flex items-center gap-2">
              <img src="/logo.png" alt="Shred Logo" className="w-26 h-26 object-contain" />
+             <span className="text-2xl font-bold uppercase tracking-wide  text-white">Shred</span>
+             </div>
           </div>
 
           {/* LINKS GRID (Right Side) */}

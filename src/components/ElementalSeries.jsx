@@ -47,13 +47,13 @@ const collections = [
 
 const ElementalSeries = () => {
   // 'magma' is the default active panel, matching your image
-  const [activeId, setActiveId] = useState('magma');
+  const [activeId, setActiveId] = useState('golden');
 
   return (
-    <section className="bg-zinc-950 py-20 px-4 md:px-8">
+    <section className="bg-zinc-950 py-12 px-4 md:px-8">
       
       {/* Section Title */}
-      <h2 className="text-white font-[Oswald] text-5xl md:text-6xl font-bold text-center mb-12 uppercase tracking-tight">
+      <h2 className="text-white  text-5xl md:text-6xl font-bold text-center mb-6 border-b border-white pb-2 rounded-full mask-b-from-0.5 to-0  uppercase tracking-wide">
         Elemental Series
       </h2>
 
@@ -106,10 +106,10 @@ const ElementalSeries = () => {
                     className="absolute bottom-0 left-0 p-8 md:p-12 w-full flex flex-col items-start z-20"
                   >
                     {/* Horizontal Title */}
-                    <h3 className="text-white font-[Oswald] text-4xl md:text-6xl font-bold uppercase leading-none mb-4">
+                    <h3 className="text-white  text-4xl md:text-6xl font-bold uppercase tracking-wide leading-none mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-white/80 text-sm md:text-base max-w-md mb-6 font-light">
+                    <p className="text-white/80 text-sm md:text-base max-w-md mb-6 font-light tracking-wide">
                       {item.description}
                     </p>
                     <button className="px-6 py-3 border-2 border-white text-white font-[Oswald] font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-colors">
@@ -118,20 +118,14 @@ const ElementalSeries = () => {
                   </motion.div>
                 ) : (
                   // Content for INACTIVE (Narrow) Panels
-                  <motion.div
-                    key="inactive-content"
-                    initial={{ opacity: 1 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                    // Rotate text 270deg and place it on the left edge
-                    className="absolute bottom-8 -left-2 z-20 origin-bottom-left -rotate-90 translate-x-50"
-                    style={{ whiteSpace: 'nowrap' }}
-                  >
-                    <h3 className="text-white font-[Oswald] text-xl md:text-2xl font-bold uppercase tracking-widest opacity-100">
-                      {item.title}
-                    </h3>
-                  </motion.div>
+            
+                  <div className={`absolute bottom-10 left-12 origin-bottom-left -rotate-90 whitespace-nowrap transition-all duration-500
+                    ${isActive ? 'opacity-0' : 'opacity-100 delay-300'}
+                    `}>
+                                  <h2 className="text-4xl font-bold text-white tracking-wide uppercase">
+                                    {item.title}
+                                  </h2>
+                                </div>
                 )}
               </AnimatePresence>
 

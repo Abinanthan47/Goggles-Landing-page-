@@ -36,12 +36,12 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full object-cover opacity-100 mix-blend-soft-light z-10"
         ></video>
       </div>
-      <div className="flex relative z-20 justify-center w-full pt-8">
+      <div className="flex relative z-20 justify-center w-full pt-56 md:pt-8">
         <motion.h1
           initial={{ y: 50, opacity: 0, }}
           animate={{ y: 0, opacity: 1, }}
           transition={{ duration: 1.2, ease: "easein" }}
-          className="text-[400px]   leading-none  font-bebas tracking-[-0.035em] text-gradient bg-linear-to-b from-white to-[#5dceff] whitespace-nowrap "
+          className=" text-7xl md:text-[400px]   leading-none  font-bebas tracking-[-0.035em] text-gradient bg-linear-to-b from-white to-[#5dceff] whitespace-nowrap "
         >
           PRO SERIES
         </motion.h1>
@@ -51,15 +51,18 @@ const Hero = () => {
           initial={{ y: 70, opacity: 0, scale: 0.7 }}
           animate={{ y: 0, opacity: 1, scale: 1, delay: 300 }}
           transition={{ duration: 1.8, ease: "easeinout" }}
+          whileHover={{x:-20,y:-10}}
           src="/hero.png"
           alt=""
-          className="h-100  top-1/2 -translate-y-75"
+          className="  md:h-100  md:top-1/2 md:-translate-y-75"
         />
+
         <img
           src="/snow-texture.png"
           alt=""
-          className="w-full bottom-14 opacity-100  absolute object-center object-cover  h-full "
+          className="w-full  hidden md:block bottom-14 opacity-100  absolute object-center object-cover  h-full "
         />
+      
       </div>
     </div>
   );
