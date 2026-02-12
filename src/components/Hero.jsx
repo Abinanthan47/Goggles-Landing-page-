@@ -40,7 +40,7 @@ const Hero = () => {
         <motion.h1
           initial={{ y: 50, opacity: 0, }}
           animate={{ y: 0, opacity: 1, }}
-          transition={{ duration: 1.2, ease: "easein" }}
+          transition={{ duration: 1.5, ease: "easein" }}
           className=" text-7xl md:text-[400px]   leading-none  font-bebas tracking-[-0.035em] text-gradient bg-linear-to-b from-white to-[#5dceff] whitespace-nowrap "
         >
           PRO SERIES
